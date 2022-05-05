@@ -1,25 +1,25 @@
-import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '../views/HomeView.vue'
 
 const routes = [
 	{
-		path: "/",
-		name: "home",
+		path: '/',
+		name: 'Home',
 		component: HomeView,
 		meta: {
-			title: "IP Address Tracker | Easy!"
-		}
-	}
-];
+			title: 'IP Address Tracker | Easy!',
+		},
+	},
+]
 
 const router = createRouter({
 	history: createWebHistory(process.env.BASE_URL),
-	routes
-});
+	routes,
+})
 
 router.beforeEach((to, from, next) => {
-	document.title = `${ to.meta.title }`; 
-	next();
-});
+	document.title = `${to.meta.title}`
+	next()
+})
 
-export default router;
+export default router
