@@ -1,4 +1,4 @@
-# app
+# An IP Address Tracker built with Vue3, TailwindCss and LeafletJs
 
 ## Project setup
 ```
