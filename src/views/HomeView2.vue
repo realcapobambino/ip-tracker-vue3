@@ -25,7 +25,7 @@
 <script setup>
 import IPInfo from '../components/IPInfo.vue';
 import leaflet from 'leaflet';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import axios from 'axios';
 
 let mymap = ref(null);
@@ -88,6 +88,10 @@ const getIpInfo = async () => {
     }
 };
 
-initializeMap();
+
+onMounted(() => {
+    initializeMap();
+    // getIpInfo();
+});
 
 </script>
