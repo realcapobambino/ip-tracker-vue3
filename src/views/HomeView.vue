@@ -31,10 +31,6 @@ import axios from 'axios'
 export default {
 	name: 'HomeView',
 	components: { IPInfo },
-	created() {
-		const mapboxApiKey = process.env.VUE_APP_MAPBOX_API_KEY;
-		console.log(mapboxApiKey)
-	},
 	setup() {
 		let mymap
 		//
@@ -50,6 +46,7 @@ export default {
 						attribution:
 							'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 						maxZoom: 18,
+						container: 'mapid',
 						id: 'mapbox/streets-v11',
 						tileSize: 512,
 						zoomOffset: -1,
